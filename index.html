@@ -40,7 +40,7 @@
 
     section {
       padding: 40px 20px;
-      max-width: 1000px;
+      max-width: 1100px;
       margin: auto;
     }
 
@@ -50,6 +50,18 @@
       padding: 20px;
       margin-bottom: 20px;
       backdrop-filter: blur(10px);
+    }
+
+    .image-box {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .image-box img {
+      width: 100%;
+      max-width: 900px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     }
 
     h2 {
@@ -71,10 +83,15 @@
 
 <header>
   <h1>Guduri Tool</h1>
-  <p class="tagline">The Ultimate Interview Assistant</p>
+  <p class="tagline">The Ultimate Stealth Interview Assistant</p>
   <p>Real-time transcription + AI suggestions</p>
   <a href="#" class="btn">Download</a>
   <p>Press <strong>Alt + G</strong> to toggle visibility</p>
+
+  <!-- MAIN UI IMAGE -->
+  <div class="image-box">
+    <img src="images/cropped-guduri-tool-complete-image.png" alt="Guduri Tool Main UI" />
+  </div>
 </header>
 
 <section>
@@ -88,8 +105,8 @@
   <div class="card">
     <h3>Transcription Engines</h3>
     <ul>
-      <li>System Mic - Your voice (system mic input)</li>
-      <li>Screen Audio (system audio input)</li>
+      <li>System Mic - Your voice</li>
+      <li>Screen Audio (Windows only)</li>
     </ul>
   </div>
 
@@ -105,21 +122,30 @@
 </section>
 
 <section>
-  <h2>User Guide</h2>
+  <h2>User Guide (With UI)</h2>
 
   <div class="card">
-    <h3>Setup</h3>
+    <h3>1. Setup</h3>
     <p>Add your Groq API key in settings.</p>
+    <div class="image-box">
+      <img src="images/cropped-and-ai-generated-image.png" alt="Settings UI" />
+    </div>
   </div>
 
   <div class="card">
-    <h3>Start Session</h3>
+    <h3>2. Start Session</h3>
     <p>Select engine → Click Play.</p>
+    <div class="image-box">
+      <img src="images/cropped-guduri-tool-complete-image.png" alt="Main UI" />
+    </div>
   </div>
 
   <div class="card">
-    <h3>Manage Data</h3>
+    <h3>3. Manage Data</h3>
     <p>Clear or Export session anytime.</p>
+    <div class="image-box">
+      <img src="images/cropped-and-ai-generated-image.png" alt="Controls UI" />
+    </div>
   </div>
 </section>
 
