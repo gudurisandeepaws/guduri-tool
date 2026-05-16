@@ -66,10 +66,22 @@
 
     h2 {
       color: #818cf8;
+      border-bottom: 2px solid #1e293b;
+      padding-bottom: 8px;
+    }
+
+    h3 {
+      color: #e2e8f0;
+      margin-top: 0;
     }
 
     ul {
       line-height: 1.8;
+      padding-left: 20px;
+    }
+
+    li strong {
+      color: #818cf8;
     }
 
     footer {
@@ -88,7 +100,6 @@
   <a href="#" class="btn">Download</a>
   <p>Press <strong>Alt + G</strong> to toggle visibility</p>
 
-  <!-- MAIN UI IMAGE -->
   <div class="image-box">
     <img src="images/cropped-guduri-tool-complete-image.png" alt="Guduri Tool Main UI" />
   </div>
@@ -105,46 +116,57 @@
   <div class="card">
     <h3>Transcription Engines</h3>
     <ul>
-      <li>System Mic - Your voice</li>
-      <li>Screen Audio (Windows only)</li>
+      <li><strong>System Mic:</strong> Captures your voice directly.</li>
+      <li><strong>Screen Audio:</strong> Captures system sound (e.g., the interviewer speaking from a Google Meet, Zoom, or Teams call). <em>Note: Windows audio only.</em></li>
     </ul>
   </div>
 
   <div class="card">
     <h3>Context-Aware Responses</h3> 
-    <p>Paste Job Description for tailored answers.</p>
+    <p>Features a dedicated multi-line text input field where you can paste the target Job Description (JD). The engine uses this data as background context to dynamically optimize and tailor AI suggestions specifically to the position requirements.</p>
   </div>
 
   <div class="card">
-    <h3>Stealth Mode</h3>
-    <p>Hide overlay during screen sharing (best-effort).</p>
+    <h3>Stealth Mode & Capture Prevention</h3>
+    <p>Built-in privacy tool that integrates with native Electron window-level APIs. When toggled, it dynamically instructs the OS to mask and hide the application window overlay completely during active screen shares or video captures without interfering with your personal view.</p>
   </div>
 </section>
  
 <section>
-  <h2>User Guide (With UI)</h2>
+  <h2>User Guide & Panel Configurations</h2>
 
   <div class="card">
-    <h3>1. Setup</h3>
-    <p>Add your Groq API key in settings.</p>
+    <h3>1. App Behavior Controls (Display Settings)</h3>
+    <p>Configure how the assistant windows overlay interacting elements during your interview sessions:</p>
+    <ul>
+      <li><strong>Keep assistant always on top:</strong> Sets the Electron window configuration property to absolute foreground overlay. This keeps the tool instantly visible over browsers, fullscreen streaming panels, or IDEs.</li>
+      <li><strong>Ask Electron to hide this window from screen capture:</strong> Enables native system level content protection parameters. Safe for use during real-time remote technical assessments.</li>
+      <li><strong>Enable Transparency / Glassmorphism:</strong> Swaps out solid styling components for a modern, fluid semi-transparent look with soft edge blur properties.</li>
+      <li><strong>Auto-scroll transcript panels:</strong> Instantly pushes viewport focus down to the latest processed speech block.</li>
+    </ul>
     <div class="image-box">
-      <img src="images/cropped-and-ai-generated-image.png" alt="Settings UI" />
+      <img src="images/settings-view-1.png" alt="Application Behavior and Capture Settings" />
     </div>
   </div>
 
   <div class="card">
-    <h3>2. Start Session</h3>
-    <p>Select engine → Click Play.</p>
+    <h3>2. Engine Setup & Security Keys</h3>
+    <p>Provide the backend processing channels and tokens required to compute context answers securely:</p>
+    <ul>
+      <li><strong>User Email Profile:</strong> Visual log displaying the authenticated active user profile structure.</li>
+      <li><strong>Transcription Selection:</strong> Dropdown control allowing context swaps between system mic feeds and desktop application sound output channels.</li>
+      <li><strong>Groq API Token Gateway:</strong> Private password-masked input framework where you securely input your custom API keys. Tokens are fully stored and persistent locally via <code>electron-store</code>.</li>
+    </ul>
     <div class="image-box">
-      <img src="images/cropped-guduri-tool-complete-image.png" alt="Main UI" />
+      <img src="images/settings-view-2.png" alt="Transcription Engine and API Credentials Panel" />
     </div>
   </div>
 
   <div class="card">
-    <h3>3. Manage Data</h3>
-    <p>Clear or Export session anytime.</p>
+    <h3>3. Start Session</h3>
+    <p>Select your preferred engine input option directly from your control tray → Click the Play icon to open data pipes.</p>
     <div class="image-box">
-      <img src="images/cropped-and-ai-generated-image.png" alt="Controls UI" />
+      <img src="images/cropped-guduri-tool-complete-image.png" alt="Main Action Tray Setup" />
     </div>
   </div>
 </section>
@@ -153,18 +175,18 @@
   <h2>Technical</h2>
 
   <div class="card">
-    <h3>VAD</h3>
-    <p>50ms RMS-based voice detection to reduce cost.</p>
+    <h3>VAD (Voice Activity Detection)</h3>
+    <p>50ms RMS-based voice detection engine that accurately captures audio cues to dramatically reduce API processing costs and data traffic spikes.</p>
   </div>
 
   <div class="card">
     <h3>Filtering</h3>
-    <p>Removes noise and hallucinations.</p>
+    <p>Intelligent text filtering engine that strips background environmental noise, stutter artifacts, and text hallucinations out of your transcript pipelines.</p>
   </div>
 
   <div class="card">
     <h3>Privacy</h3>
-    <p>No permanent storage. Data stays local.</p>
+    <p>Zero external cloud parsing networks or storage setups utilized. All your inputs, credentials, and transcript arrays remain completely isolated within your local system sandbox storage loops.</p>
   </div>
 </section>
 
@@ -172,16 +194,12 @@
   <h2>FAQ</h2>
 
   <div class="card">
-    <p><strong>Why no screen audio?</strong><br/>Windows only feature.</p>
+    <p><strong>Why no screen audio?</strong><br/>Windows platform specific architecture limitation.</p>
   </div>
 
   <div class="card">
-    <p><strong>Upgrade?</strong><br/>Premium unlocks full access.</p>
+    <p><strong>Upgrade?</strong><br/>Activating Premium instantly bypasses all timing gates and provides unlimited AI tokens.</p>
   </div>
-
-  <!-- <div class="card">
-    <p><strong>Detectable?</strong><br/>Stealth mode helps but not guaranteed.</p>
-  </div> -->
 </section>
 
 <footer>
